@@ -1,57 +1,23 @@
-## Micronaut 4.5.1 Documentation
+Backend for hotel reservation system
 
-- [User Guide](https://docs.micronaut.io/4.5.1/guide/index.html)
-- [API Reference](https://docs.micronaut.io/4.5.1/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/4.5.1/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+[Entities]
+Days
+All days, to help with logic of room occupancy
 
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-- [Micronaut Gradle Plugin documentation](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/)
-- [GraalVM Gradle Plugin documentation](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
-## Feature openapi documentation
+Roomoccupancy
+Day + room boolean if occupied
 
-- [Micronaut OpenAPI Support documentation](https://micronaut-projects.github.io/micronaut-openapi/latest/guide/index.html)
+Room
+All rooms in the hotel
 
-- [https://www.openapis.org](https://www.openapis.org)
+Price
+Unique with relation to day and room
+Price of room at current day
 
+Guest
+Guests staying at hotel. Not related to users
+One guests can have multiple stays without registering, each with unique occurences. 
 
-## Feature lombok documentation
-
-- [Micronaut Project Lombok documentation](https://docs.micronaut.io/latest/guide/index.html#lombok)
-
-- [https://projectlombok.org/features/all](https://projectlombok.org/features/all)
-
-
-## Feature serialization-jackson documentation
-
-- [Micronaut Serialization Jackson Core documentation](https://micronaut-projects.github.io/micronaut-serialization/latest/guide/)
-
-
-## Feature micronaut-aot documentation
-
-- [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
-
-
-## Feature swagger-ui documentation
-
-- [Micronaut Swagger UI documentation](https://micronaut-projects.github.io/micronaut-openapi/latest/guide/index.html)
-
-- [https://swagger.io/tools/swagger-ui/](https://swagger.io/tools/swagger-ui/)
-
-
-## Feature hibernate-jpa documentation
-
-- [Micronaut Hibernate JPA documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#hibernate)
-
-
-## Feature jdbc-hikari documentation
-
-- [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
-
-
-## Feature test-resources documentation
-
-- [Micronaut Test Resources documentation](https://micronaut-projects.github.io/micronaut-test-resources/latest/guide/)
-
-
+Boooking 
+Unique 
+related to room and guest

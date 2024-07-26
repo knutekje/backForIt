@@ -23,6 +23,9 @@ public class Guest {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "registeredguest")
+    private boolean registeredguest;
+
     @Column(name = "email")
     private String email;
 
