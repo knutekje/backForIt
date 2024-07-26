@@ -50,9 +50,7 @@ micronaut {
         incremental(true)
         annotations("com.example.*")
     }
-    testResources {
-        additionalModules.add("jdbc-postgresql")
-    }
+  
     aot {
         // Please review carefully the optimizations enabled below
         // Check https://micronaut-projects.github.io/micronaut-aot/latest/guide/ for more details
