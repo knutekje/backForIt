@@ -2,7 +2,8 @@ package com.example.Entities;
 
 
 import io.micronaut.serde.annotation.Serdeable;
-
+import com.example.Entities.Guest;
+import com.example.Entities.Room;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,7 +12,8 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@Serdeable
+@Serdeable.Serializable
+@Serdeable.Deserializable
 @Table(name = "bookings")
 public class Booking {
     
@@ -20,10 +22,9 @@ public class Booking {
     @Column(name = "id")
     private long id;
     
-    
     @Column(name = "guest_id")
     private long guestId;
-
+   
     @Column(name = "room_id")
     private long roomId;
 

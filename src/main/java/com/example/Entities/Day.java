@@ -2,9 +2,10 @@ package com.example.Entities;
 
 import java.sql.Date;
 
-import io.micronaut.data.annotation.Id;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @lombok.Getter
@@ -12,7 +13,10 @@ import jakarta.persistence.Table;
 @lombok.NoArgsConstructor
 @Table(name = "days")
 public class Day {
+    
     @Id
+    @Column(name = "id")
     private Date id;
+    
     
 }
