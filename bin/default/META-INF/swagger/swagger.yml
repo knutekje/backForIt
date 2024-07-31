@@ -10,3 +10,88 @@ paths:
             text/plain:
               schema:
                 type: string
+  /booking:
+    get:
+      operationId: getBookings
+      responses:
+        "200":
+          description: getBookings 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Booking"
+  /booking/check:
+    get:
+      operationId: checkAvailability
+      responses:
+        "200":
+          description: checkAvailability 200 response
+          content:
+            text/plain:
+              schema:
+                type: string
+  /booking/new:
+    post:
+      operationId: newBooking
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Booking"
+        required: true
+      responses:
+        "200":
+          description: newBooking 200 response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Booking"
+  /room:
+    get:
+      operationId: getRooms
+      responses:
+        "200":
+          description: getRooms 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Room"
+components:
+  schemas:
+    Booking:
+      type: object
+      properties:
+        endDate:
+          type: string
+        guestId:
+          type: integer
+          format: int64
+        id:
+          type: integer
+          format: int64
+          nullable: true
+        roomId:
+          type: integer
+          format: int64
+        rooms:
+          type: array
+          items:
+            $ref: "#/components/schemas/Room"
+        startDate:
+          type: string
+    Room:
+      type: object
+      properties:
+        capacity:
+          type: number
+          format: double
+        id:
+          type: integer
+          format: int64
+          nullable: true
+        name:
+          type: string
