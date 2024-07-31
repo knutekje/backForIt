@@ -1,4 +1,4 @@
-package com.example;
+package com.example.controllers;
         
 
 import java.util.List;
@@ -12,7 +12,8 @@ import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lombok.NoArgsConstructor;
 
-import com.example.Entities.Booking;
+import com.example.entities.Booking;
+import com.example.repositories.BookingRepo;
 
 
 

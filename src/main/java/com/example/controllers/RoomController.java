@@ -1,8 +1,9 @@
-package com.example;
+package com.example.controllers;
 
 import java.util.List;
 
-import com.example.Entities.Room;
+import com.example.entities.Room;
+import com.example.repositories.RoomRepo;
 
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;

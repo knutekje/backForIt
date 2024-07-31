@@ -1,4 +1,4 @@
-package com.example.Controllers;
+package com.example.controllers;
 
 import io.micronaut.http.annotation.*;
 

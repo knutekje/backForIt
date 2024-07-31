@@ -1,9 +1,9 @@
-package com.example;
+package com.example.repositories;
+
+import com.example.entities.*;
 
 import io.micronaut.data.annotation.Repository;
 import io.micronaut.data.jpa.repository.JpaRepository;
-
-import com.example.Entities.*;
 
 
 @Repository

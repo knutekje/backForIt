@@ -1,9 +1,12 @@
-package com.example.Entities;
+package com.example.entities;
 
 
+import java.util.Set;
+
+import com.example.entities.*;
+
+import io.micronaut.data.annotation.Relation;
 import io.micronaut.serde.annotation.Serdeable;
-import com.example.Entities.Guest;
-import com.example.Entities.Room;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -33,4 +36,12 @@ public class Booking {
 
     @Column(name = "end_date")
     private String endDate;
+
+    @JoinColumn(name = "room_id")
+    @Relation(value = Relation.Kind.ONE_TO_MANY, cascade = Relation.Cascade.ALL)
+    private Set<Room> rooms;
+/* 
+    @JoinColumn(name = "guest_id")
+    @Relation(value = Relation.Kind.MANY_TO_ONE, cascade = Relation.Cascade.ALL)
+    private Set<Guest> guests; */
 }
